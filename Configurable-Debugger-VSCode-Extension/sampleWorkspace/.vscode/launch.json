@@ -1,0 +1,93 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "configurable",
+            "request": "launch",
+            "name": "Launch Workout DSL",
+            "sourceFile": "${workspaceFolder}/test.wop",
+            "configurableDebuggerPort": 49153,
+            "languageRuntimePort": 49152,
+            "pauseOnStart": true,
+            "enabledBreakpointTypeIds": [],
+            "additionalArgs": {}
+        },
+        {
+            "type": "configurable",
+            "request": "launch",
+            "name": "Launch AtoB MiniTL",
+            "sourceFile": "${workspaceFolder}/../../runtimes/MiniTL/plugins/org.tetrabox.example.minitl.examples/transfos/simpleAtoB/simpleAtoB.minitl",
+            "configurableDebuggerPort": 49153,
+            "languageRuntimePort": 49152,
+            "pauseOnStart": true,
+            "enabledBreakpointTypeIds": [],
+            "additionalArgs": {
+                "inputModel": "${workspaceFolder}/../../runtimes/MiniTL/plugins/org.tetrabox.example.minitl.examples/transfos/simpleAtoB/input/modelA.xmi",
+                "outputModel": "${workspaceFolder}/../../runtimes/MiniTL/plugins/org.tetrabox.example.minitl.examples/transfos/simpleAtoB/output/modelB.xmi"
+            }
+        },
+        {
+            "type": "configurable",
+            "request": "launch",
+            "name": "Launch BookToPublication MiniTL",
+            "sourceFile": "${workspaceFolder}/../../runtimes/MiniTL/plugins/org.tetrabox.example.minitl.examples/transfos/bookToPublication/bookToPublication.minitl",
+            "configurableDebuggerPort": 49153,
+            "languageRuntimePort": 49152,
+            "pauseOnStart": true,
+            "enabledBreakpointTypeIds": [],
+            "additionalArgs": {
+                "inputModel": "${workspaceFolder}/../../runtimes/MiniTL/plugins/org.tetrabox.example.minitl.examples/transfos/bookToPublication/input/Book.xmi",
+                "outputModel": "${workspaceFolder}/../../runtimes/MiniTL/plugins/org.tetrabox.example.minitl.examples/transfos/bookToPublication/output/Publication.xmi"
+            }
+        },
+        {
+            "type": "configurable",
+            "request": "launch",
+            "name": "Launch Sample State Machine",
+            "sourceFile": "${workspaceFolder}/sample.stmch",
+            "configurableDebuggerPort": 49153,
+            "languageRuntimePort": 49152,
+            "pauseOnStart": true,
+            "enabledBreakpointTypeIds": [
+                "stateMachine.stateReached"
+            ],
+            "additionalArgs": {
+                "inputs": [
+                    "b",
+                    "d",
+                    "a",
+                    "b",
+                    "final"
+                ]
+            }
+        },
+        {
+            "type": "configurable",
+            "request": "launch",
+            "name": "Launch Telephone State Machine",
+            "sourceFile": "${workspaceFolder}/telephone.stmch",
+            "configurableDebuggerPort": 49153,
+            "languageRuntimePort": 49152,
+            "pauseOnStart": true,
+            "additionalArgs": {
+                "inputs": [
+                    "liftReceiver",
+                    "after",
+                    "callerHangsUp",
+                    "liftReceiver",
+                    "dialDigit",
+                    "dialDigitIncomplete",
+                    "dialDigitValid",
+                    "connected",
+                    "calleeAnswers",
+                    "calleeHangsUp",
+                    "calleeAnswers",
+                    "terminate"
+                ]
+            }
+        }
+    ]
+}
